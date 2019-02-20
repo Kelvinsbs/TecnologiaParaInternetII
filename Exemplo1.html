@@ -1,0 +1,70 @@
+<!--html>
+	<body>
+		<p id="Teste"></p>
+		<script>
+		document.getElementById("Teste").innerHTML = "Olá pessoal!";
+		$("#Teste").html("Olá pessoal!");
+		</script>
+	</body>
+</html-->
+<html>
+	<body>
+		<p id="Teste"></p>
+		<script>
+			
+			function add(a, b) {
+				var a = document.getElementById("a").value;
+				var b = document.getElementById("b").value;
+				document.getElementById("resultado").value = parseInt(a) + parseInt(b);
+				return a + b;
+			}
+			function sub(a, b) {
+				var a = document.getElementById("a").value;
+				var b = document.getElementById("b").value;
+				document.getElementById("resultado").value = a - b;
+				return a - b;
+			}
+			function div(a, b) {
+				var a = document.getElementById("a").value;
+				var b = document.getElementById("b").value;
+				document.getElementById("resultado").value = a / b;
+				return a / b;
+			}
+			function mult(a, b) {
+				var a = document.getElementById("a").value;
+				var b = document.getElementById("b").value;
+				document.getElementById("resultado").value = a * b;
+				return a * b;
+			}
+		</script>
+		<div style="width: 350px; height: 150px; background-color:#808080;">
+			<legend style="text-align:center;">Calculadora</legend>
+				<div style="float:left; text-align:center;">
+					<label>Digite o Valor 1</label>
+					<input id="a" />
+				</div>
+
+				<div style="float:left; margin-top: 7px;">
+					<label>Digite o Valor 2</label>
+					<input id="b" />
+				</div>
+
+				<div style="float:left; margin-top: 7px; text-align:center;">
+					<button onclick="add()" style="margin-right:10px;">+</button>
+
+					<button onclick="sub()" style="margin-right:10px;">-</button>
+				
+					<button onclick="div()" style="margin-right:10px;">/</button>
+				
+					<button onclick="mult()" style="margin-right:10px;">*</button>
+				</div>
+				
+				<div style="float:left; margin-top: 7px; ">
+					<label>Resultado</label>
+					<input id="resultado" />
+				</div>
+				
+		</div>
+		
+	</body>
+</html>
