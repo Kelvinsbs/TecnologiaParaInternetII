@@ -2,10 +2,98 @@
 <html>
 <body>
 	<p>Testando</p>
-	<button onclick="document.write(5 + 6)">Aaayooooh!</button>
-<!--<script>
-	document.write(" B"+5+6);
-</script>-->
+	<!--<button onclick="cliqueBotao()">Aaayooooh!</button>
+	<br />
+	<br />	
+	<input type="text" id="idade" value="18"></input>
+	<button onclick="avaliarIdade(document.getElementById('idade').value)">Verificar Idade</button>
+	<br />
+	<br />
+	<button onclick="alert(diaSemana())">Dia da Semana!</button>-->
+
+	<table border="1">
+		<tr>
+			<td colspan="2"><button onclick="cliqueBotao()">Aaayooooh!</button></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="idade" value="18"></input></td>
+			<td><button onclick="avaliarIdade(document.getElementById('idade').value)">Verificar Idade</button></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onclick="alert(diaSemana())">Dia da Semana!</button></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button onclick="alert(NomeMes())">Mês Atual!</button></td>
+		</tr>
+	</table>
+
+	<script>
+		//document.write(" B"+5+6);
+
+		function cliqueBotao(){
+			//document.write(5+6);
+			window.alert(5+6);
+			console.log('Testando 5 + 6 = ', 5+6);
+		}
+
+		function avaliarIdade(idade){
+
+			idade = parseInt(idade);			
+			var mensagem = "";
+
+			if(idade >= 16){
+				mensagem = "Você pode votar";
+			}else{
+				mensagem = "Você ainda não pode votar";
+			}
+			window.alert(mensagem);
+		}
+
+		function soma(x, y){
+			//var result = x + y;
+			return (x + y);
+		}
+
+		function diaSemana(){
+			var dia = "";
+			switch (new Date().getDay()) {
+				case 0:
+					dia = "Domingo";
+					break;
+				case 1:
+					dia = "Segunda";
+					break;
+				case 2:
+					dia = "Terça";
+					break;
+				case 3:
+					dia = "Quarta";
+					break;
+				case 4:
+					dia = "Quinta";
+					break;
+				case 5:
+					dia = "Sexta";
+					break;
+				case 6:
+					dia = "Sábado";
+					break;
+				default:
+					dia = "Data invalida!";
+			}
+			return dia;
+		}
+
+		function NomeMes(){
+			var mes = new Date().getMonth();
+			var vet = {0: 'Janeiro', 1: 'Fevereiro', 2: 'Março', 3: 'Abril', 4: 'Maio', 5: 'Junho', 
+			6: 'Julho', 7: 'Agosto', 8: 'Setembro', 9: 'Outubro', 10: 'Novembro', 11: 'Dezembro'};
+			vet[mes];
+			return vet[mes];
+			
+		}
+
+	</script>
 	
 </body>
 </html>
