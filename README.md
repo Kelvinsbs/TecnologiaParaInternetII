@@ -8,5 +8,8 @@
  - Avaliar a Idade
  - Soma de Valores Fixos
  - Calculadora
+ 
+ 
+ * Linguagens Sendo utilizadas: PHP, Javascript, JQuery e HTML
 
 * Autor: Kelvin Santos Barcelos
